@@ -1,0 +1,25 @@
+##BOOT PARAMETER##
+setparams 'Ubuntu' -> membuat parameter ke OS Ubuntu
+
+	recordfail -> parameter untuk boot-menu timeout
+	load_video -> load driver dari GPU (?)
+	insmod gzio -> insert module (insmod) gzio (module I/O Gzip)
+	if [ x$grub_platform = xxen]; then insmod xzio; insmod lzopio; fi -> jika grub_platform = xen, maka insert module xzio dan lzopio (module I/O untuk file .xz dan .lzop), end if. 
+	insmod part_gpt -> insert module part_gpt(module partitioning GPT)
+	insmod ext2 -> insert module ext2(module support untuk file sistem EXT2)
+	if [x$feature_platform_search_hint = xy]; then
+	  search --no-floppy --fs-uuid --set=root uuid
+	else
+	  search --no-floppy --fs-uuid --set=root uuid
+	fi -> bertugas untuk mencari uuid dari partisi linux yang ada
+	linux path/to/kernel ro quiet splash $vt_handoff -> menspesifikasi path dari kernel, ro berarti read only, quiet splash berarti booting quiet, dan menampilkan splash screen, $vt_handoff berguna untuk memperlihatkan loading screen sebelum login prompt
+	initrd path/to/ramdisk -> load ramdisk untuk kernel
+
+
+##PARAMETER DARI /etc/default/grub##
+GRUB_DEFAULT = 0 -> entry bootloader, 0 berarti entry terdepan
+GRUB_SAVEDEFAULT = true ->menyimpan settingan default dari grub
+GRUB_TIMEOUT = 10 -> timeout dari bootloader grub
+GRUB_DISTRIBUTOR = `lsb_release -i -s 2> /dev/null || echo Debian` -> menspesifikasikan distro dari grub
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash" -> mengimpor seluruh entry setelah baris 'linux'
+GRUB_CMDLINE_LINUX=""

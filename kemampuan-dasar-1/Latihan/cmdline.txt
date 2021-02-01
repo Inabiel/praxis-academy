@@ -1,0 +1,12 @@
+ls 
+ls -R
+ls -a
+ls -al 
+alias administrator='sudo'
+cd Downloads
+cat > sample1
+cat sample1
+rm sample1
+touch sample2
+cat sample2
+rm sample2
