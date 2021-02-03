@@ -159,16 +159,18 @@ hickory-dickory ~/Programming Stuffs/cloned/rhymes> wget https://www.acquia.com/
  hickory-dickory ~/Programming Stuffs/rhymes> git push origin hickory-dickory
 ```
 
+**Step 3: Alice reviews and accepts Bob's simple changes**
+
 ```zsh
 hickory-dickory ~/Programming Stuffs/rhymes> git remote rename origin alice
-hickory-dickory ~/Programming Stuffs/rhymes> git remote add bob https://github.com/Inabiel/rhymes.git
+master ~/Programming Stuffs/rhymes> git remote add bob https://github.com/Frzst13/rhymes
 hickory-dickory ~/Programming Stuffs/rhymes> git remote
 alice
 bob
 alice	git@github.com:Inabiel/rhymes.git (fetch)
 alice	git@github.com:Inabiel/rhymes.git (push)
-bob	https://github.com/Inabiel/rhymes.git (fetch)
-bob	https://github.com/Inabiel/rhymes.git (push)
+bob	https://github.com/Frzst13/rhymes (fetch)
+bob	https://github.com/Frzst13/rhymes (push)
 ```
 
 ```zsh
@@ -195,3 +197,56 @@ master ~/Programming Stuffs/rhymes> git merge hickory-dickory
 Already up to date.
 master ~/Programming Stuffs/rhymes> 
 ```
+
+**Step 4: Bob makes lots of changes**
+
+```zsh
+master ~/Programming Stuffs/rhymes2/rhymes> git remote rename origin bob
+master ~/Programming Stuffs/rhymes2/rhymes> git remote add alice https://github.com/Inabiel/rhymes.git
+master ~/Programming Stuffs/rhymes2/rhymes> git remote
+alice
+bob
+master ~/Programming Stuffs/rhymes2/rhymes> git remote -v
+alice	https://github.com/Inabiel/rhymes.git (fetch)
+alice	https://github.com/Inabiel/rhymes.git (push)
+bob	https://github.com/Frzst13/rhymes.git (fetch)
+bob	https://github.com/Frzst13/rhymes.git (push)
+master ~/Programming Stuffs/rhymes2/rhymes> 
+```
+
+```zsh
+master ~/Programming Stuffs/rhymes2/rhymes> git remote update
+Fetching bob
+Fetching alice
+From https://github.com/Inabiel/rhymes
+ * [new branch]      hickory-dickory -> alice/hickory-dickory
+ * [new branch]      master          -> alice/master
+master ~/Programming Stuffs/rhymes2/rhymes> git checkout master
+Already on 'master'
+Your branch is up to date with 'bob/master'.
+master ~/Programming Stuffs/rhymes2/rhymes> git merge alice/master
+Already up to date.
+master ~/Programming Stuffs/rhymes2/rhymes> 
+```
+
+```zsh
+master ~/Programming Stuffs/rhymes2/rhymes> git checkout -b bobs-changes
+Switched to a new branch 'bobs-changes'
+```
+
+'''zsh
+bobs-changes ~/Programming Stuffs/rhymes2/rhymes> echo 'rhymes' > jack-be-nimble.txt
+?bobs-changes ~/Programming Stuffs/rhymes2/rhymes> git add jack-be-nimble.txt 
++bobs-changes ~/Programming Stuffs/rhymes2/rhymes> git commit -m 'added jack-be-nimble.txt'    
+[bobs-changes 0eb3e04] added jack-be-nimble.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 jack-be-nimble.txt
+bobs-changes ~/Programming Stuffs/rhymes2/rhymes> 
+```
+```zsh
+bobs-changes ~/Programming Stuffs/rhymes2/rhymes> git rebase -i 700f485 
+Successfully rebased and updated refs/heads/bobs-changes.
+bobs-changes ~/Programming Stuffs/rhymes2/rhymes> 
+```
+
+**Masih ada beberapa error, susah menggunakan 2 akun github dalam satu pc. dalam implementasi harusnya dengan satu teman**
