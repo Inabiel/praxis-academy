@@ -244,6 +244,7 @@ bobs-changes ~/Programming Stuffs/rhymes2/rhymes> echo 'rhymes' > jack-be-nimble
 bobs-changes ~/Programming Stuffs/rhymes2/rhymes> 
 ```
 
+**Step 5: Bob cleans up his work before submitting**
 ```zsh
 bobs-changes ~/Programming Stuffs/rhymes2/rhymes> git rebase -i 700f485 
 Successfully rebased and updated refs/heads/bobs-changes.
