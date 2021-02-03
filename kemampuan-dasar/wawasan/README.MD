@@ -14,4 +14,4 @@ Agile Software Development adalah prinsip pengembangan sistem jangka pendek deng
 Scrum adalah sebuah metode iteratif yang termasuk dalam metode Agile tentang bagaimana cara Anda mengelola dan menjalankan sebuah proyek. Scrum didesain untuk team berjumlah 10 orang kebawah, yang akan dipecah-pecah pekerjaanya untuk tujuan yang bisa diselesaikan dalam suatu waktu iterasi yang bernama sprints.
 
 # extreme programming
-Extreme Programming (XP) adalah sebuah pendekatan atau model pengembangan perangkat lunak yang mencoba menyederhanakan berbagai tahapan dalam proses pengembangan tersebut sehingga menjadi lebih adaptif dan fleksibel. XP bukan hanya berfokus pada coding tetapi meliputi seluruh area pengembangan perangkat lunak. XP mengambil pendekatan ‘ekstrim’ dalam iterative development
+Extreme Programming (XP) adalah sebuah pendekatan atau model pengembangan perangkat lunak yang mencoba menyederhanakan berbagai tahapan dalam proses pengembangan tersebut sehingga menjadi lebih adaptif dan fleksibel. XP bukan hanya berfokus pada coding tetapi meliputi seluruh area pengembangan perangkat lunak. XP mengambil pendekatan ‘ekstrim’ dalam iterative development.
