@@ -234,7 +234,7 @@ master ~/Programming Stuffs/rhymes2/rhymes> git checkout -b bobs-changes
 Switched to a new branch 'bobs-changes'
 ```
 
-'''zsh
+```zsh
 bobs-changes ~/Programming Stuffs/rhymes2/rhymes> echo 'rhymes' > jack-be-nimble.txt
 ?bobs-changes ~/Programming Stuffs/rhymes2/rhymes> git add jack-be-nimble.txt 
 +bobs-changes ~/Programming Stuffs/rhymes2/rhymes> git commit -m 'added jack-be-nimble.txt'    
@@ -243,6 +243,7 @@ bobs-changes ~/Programming Stuffs/rhymes2/rhymes> echo 'rhymes' > jack-be-nimble
  create mode 100644 jack-be-nimble.txt
 bobs-changes ~/Programming Stuffs/rhymes2/rhymes> 
 ```
+
 ```zsh
 bobs-changes ~/Programming Stuffs/rhymes2/rhymes> git rebase -i 700f485 
 Successfully rebased and updated refs/heads/bobs-changes.
