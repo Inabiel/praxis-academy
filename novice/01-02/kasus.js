@@ -20,7 +20,7 @@ let dictionaries = [
         nama_blk : 'Getuk'
     },
     nama_lkp : function(){
-        return (this.nama.nama_dpn + ' ' +  this.nama.nama_blk)
+        return(`${this.nama.nama_dpn} ${this.nama.nama_blk}`)
     },
     nim : '382912',
     alamat: {
@@ -31,4 +31,4 @@ let dictionaries = [
     }}
 ]
 
-console.log(dictionaries[0].nama_lkp())
+console.log(dictionaries[1].nama_lkp())
