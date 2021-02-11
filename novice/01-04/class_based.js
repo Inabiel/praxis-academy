@@ -7,7 +7,6 @@ class Petarunx{
         this.dmg = 0;
         this.level = 1
     }
-
     aturAtributPetarung(){
         switch(this.kelas){
             case 'Warrior':
@@ -18,7 +17,18 @@ class Petarunx{
                 this.hp = 90;
                 this.mana = 80;
                 this.dmg = 90;
-    }
+        }}
+
+        attributeSekarang(){
+            return {
+                'kelas':this.kelas,
+                'HP':this.hp,
+                'mana':this.mana,
+                'total_dmg':this.dmg,
+                'level':this.level
+            }
+        }
+
     naikLevel(){
         this.level +=1
         this.mana+=((20)+(0.4*this.level))
@@ -27,6 +37,12 @@ class Petarunx{
     }
     berjalan(){
         return(`${this.nama} sedang berjalan ${(Math.random()*100).toFixed()} langkah`)
+    }
+    berlatih(){
+        this.hp += (Math.floor(Math.random() * 80))*(this.level*0.9).toFixed()
+        this.mana += (Math.floor(Math.random() * 80))*(this.level*0.9).toFixed()
+        this.dmg += (Math.floor(Math.random() * 80))*(this.level*0.9).toFixed()
+        return `Telah Berlatih. Menjadi ${petarungSatu.hp} HP, ${petarungSatu.mana} mana, dan ${petarungSatu.dmg} damage`;
     }
 }
 
@@ -39,8 +55,10 @@ class PetarunxDua extends Petarunx{
 
 const petarungSatu = new Petarunx('Baginda', 'Warrior')
 petarungSatu.aturAtributPetarung()
-console.log(`${petarungSatu.nama} mempunyai ${petarungSatu.hp} HP, ${petarungSatu.mana} mana, dan ${petarungSatu.dmg} damage`)
-for(i=1;i<=10;i++){
+console.log(`${petarungSatu.nama} dengan level ${petarungSatu.level} mempunyai ${petarungSatu.hp} HP, ${petarungSatu.mana} mana, dan ${petarungSatu.dmg} damage`)
+console.log(petarungSatu.berlatih())
+for(let i = 1; i<= 10; ++i){
     petarungSatu.naikLevel()
 }
-console.log(`${petarungSatu.nama} dengan level ${petarungSatu.level} mempunyai ${petarungSatu.hp} HP, ${petarungSatu.mana} mana, dan ${petarungSatu.dmg} damage`)
+
+console.log(petarungSatu.attributeSekarang())

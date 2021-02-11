@@ -31,10 +31,28 @@ Petarunx.prototype.naikLevel = function(){
     this.dmg+=((10)+(0.5*this.level))
 }
 
+Petarunx.prototype.berlatih = function(){
+    this.hp += (Math.floor(Math.random() * 80))*(this.level*0.9).toFixed()
+    this.mana += (Math.floor(Math.random() * 80))*(this.level*0.9).toFixed()
+    this.dmg += (Math.floor(Math.random() * 80))*(this.level*0.9).toFixed()
+}
+Petarunx.prototype.attributeSekarang = function(){
+    return {
+        'kelas':this.kelas,
+        'HP':this.hp,
+        'mana':this.mana,
+        'total_dmg':this.dmg,
+        'level':this.level
+    }
+}
+
 let PetarungSatu = new Petarunx('Baginda','Warrior');
 PetarungSatu.aturAtributKelas()
-PetarungSatu.naikLevel()
-console.log(PetarungSatu.mana)
+for(let i = 1; i<= 10; ++i){
+    PetarungSatu.naikLevel()
+}
+PetarungSatu.berlatih()
+console.log(PetarungSatu.attributeSekarang())
 
 class tambahKalori{
     constructor(kalori){
