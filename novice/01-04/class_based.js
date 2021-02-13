@@ -7,17 +7,23 @@ class Petarunx{
         this.dmg = 0;
         this.level = 1
     }
+
     aturAtributPetarung(){
         switch(this.kelas){
             case 'Warrior':
                 this.hp = 90;
                 this.mana = 130;
                 this.dmg = 100;
+                break;
             case 'Witch':
                 this.hp = 90;
                 this.mana = 80;
                 this.dmg = 90;
+                break;
         }}
+        get damageSekarang(){
+            return this.dmg
+        }
 
         attributeSekarang(){
             return {
@@ -56,9 +62,7 @@ class PetarunxDua extends Petarunx{
 const petarungSatu = new Petarunx('Baginda', 'Warrior')
 petarungSatu.aturAtributPetarung()
 console.log(`${petarungSatu.nama} dengan level ${petarungSatu.level} mempunyai ${petarungSatu.hp} HP, ${petarungSatu.mana} mana, dan ${petarungSatu.dmg} damage`)
-console.log(petarungSatu.berlatih())
-for(let i = 1; i<= 10; ++i){
-    petarungSatu.naikLevel()
-}
 
 console.log(petarungSatu.attributeSekarang())
+console.log(petarungSatu.damageSekarang)
+
