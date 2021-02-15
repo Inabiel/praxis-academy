@@ -32,3 +32,5 @@ class People{
 newChar = new People('Nabil Izzullah')
 newChar.attribute = 'Warrior';
 console.log(newChar.currentAttribute)
+console.log(newChar.dmg)
+

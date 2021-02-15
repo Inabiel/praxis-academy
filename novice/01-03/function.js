@@ -69,3 +69,6 @@ let kalimat = [
 
 testing = panjangKalimat(kalimat, 'pagi')
 console.log(testing)
+console.log('*'.repeat(20))
+console.log(cariPanjang(isiarray))
+console.log(typeof(cariPanjang(isiarray)))

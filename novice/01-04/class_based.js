@@ -59,6 +59,8 @@ class PetarunxDua extends Petarunx{
 
 }
 
+module.exports = {Petarunx, PetarunxDua}
+
 const petarungSatu = new Petarunx('Baginda', 'Warrior')
 petarungSatu.aturAtributPetarung()
 console.log(`${petarungSatu.nama} dengan level ${petarungSatu.level} mempunyai ${petarungSatu.hp} HP, ${petarungSatu.mana} mana, dan ${petarungSatu.dmg} damage`)
