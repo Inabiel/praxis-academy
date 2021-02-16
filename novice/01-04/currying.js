@@ -1,9 +1,9 @@
 //Contoh Currying, invoking multiple function into one single function call
-const add = (a,b) =>{
-    c = a+b
+const add = (a, b) => {
+    c = a + b
     return () => {
-        return c+c
+        return c + c
     }
 }
 
-console.log(add(10,20)())
+console.log(add(10, 20)())

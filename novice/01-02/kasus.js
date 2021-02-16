@@ -1,7 +1,7 @@
 let dictionaries = [
     {
     nama: {
-        nama_dpn : 'Nabil',
+        'nama_dpn' : 'Nabil',
         nama_blk : 'Izzullah'
     },
     nama_lkp : function(){
@@ -31,4 +31,4 @@ let dictionaries = [
     }}
 ]
 
-console.log(dictionaries[1].nama_lkp())
+console.log(dictionaries[0].nama.nama_dpn)
