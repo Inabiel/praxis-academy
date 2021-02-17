@@ -1,38 +1,40 @@
-function pakaiReturn(){
+function pakaiReturn() {
     let a = 5
     return a
 }
 
-function tanpaReturn(){
+function tanpaReturn() {
     let a = 5
     console.log(a)
 }
 
 a = pakaiReturn()
 b = tanpaReturn()
-console.log(typeof(a))
-console.log(typeof(b))
+console.log(typeof (a))
+console.log(typeof (b))
 
 
 
-let perkalian_banyak = (...nums) => nums.reduce((a,b)=> a *= b)
+let perkalian_banyak = (...nums) => nums.reduce((a, b) => a *= b)
 
-console.log(perkalian_banyak(1,2,3,4,5,6))
+console.log(perkalian_banyak(1, 2, 3, 4, 5, 6))
 
 
 ///Arrow Function, lambda in python
 ////Studi Kasus 1
-let pertambahan = (...nums) => nums.reduce((a,b) => a+b)
+let pertambahan = (...nums) => nums.reduce((a, b) => a + b)
 
-console.log(pertambahan(1,4,9,1))
+console.log(pertambahan(1, 4, 9, 1))
 
 //Studi Kasus 2
 let cariPanjang = (arr) => {
     let detail = arr.map(arr => arr.length);
-    let jelasArr = arr.map( (i,j)=>{
-        return {'nama':i, 'panjang':detail[j]}
-    }
-    )
+    let jelasArr = arr.map((i, j) => {
+        return {
+            'nama': i,
+            'panjang': detail[j]
+        }
+    })
     return jelasArr
 }
 
@@ -42,7 +44,7 @@ isiarray = [
     'Bajigur'
 ]
 
-for(let i of cariPanjang(isiarray)){
+for (let i of cariPanjang(isiarray)) {
     console.log(`Nama nya adalah ${i.nama} dengan panjang ${i.panjang} karakter`)
 }
 
@@ -50,12 +52,12 @@ for(let i of cariPanjang(isiarray)){
 let panjangKalimat = (arr, ...paramkata) => {
     let jml = 0
     let panjangKal = arr.map(arr => arr.split(' '))
-    for(let i of panjangKal){
-       for(let kata of i){
-           if(kata == paramkata){
-               jml +=1
-           }
-       }
+    for (let i of panjangKal) {
+        for (let kata of i) {
+            if (kata == paramkata) {
+                jml += 1
+            }
+        }
     }
     return jml
 }
@@ -71,4 +73,4 @@ testing = panjangKalimat(kalimat, 'pagi')
 console.log(testing)
 console.log('*'.repeat(20))
 console.log(cariPanjang(isiarray))
-console.log(typeof(cariPanjang(isiarray)))
+console.log(typeof (cariPanjang(isiarray)))
