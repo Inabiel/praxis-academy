@@ -1,0 +1,60 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 12.6 (Ubuntu 12.6-0ubuntu0.20.04.1)
+-- Dumped by pg_dump version 12.6 (Ubuntu 12.6-0ubuntu0.20.04.1)
+
+-- Started on 2021-02-23 09:36:58 WIB
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+--
+-- TOC entry 2964 (class 0 OID 16404)
+-- Dependencies: 202
+-- Data for Name: employee; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.employee (nip, nama, gender, salary) FROM stdin;
+213	Malkmus	Male	4201
+\.
+
+
+--
+-- TOC entry 2965 (class 0 OID 16416)
+-- Dependencies: 203
+-- Data for Name: laporan_arus_kas; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.laporan_arus_kas (no, uraian, jumlah) FROM stdin;
+A.1	Arus Masuk Kas dari Aktivitas Operasi	Rp1.398.910.993.061,00
+A.2	Arus Masuk Kas dari Aktivitas Operasi	Rp1.106.739.153.101,00
+B.1	Arus Masuk Kas dari Aktivitas Investasi Aset Non Keuangan	Rp0,00
+B.2	Arus Keluar Kas dari Aktivitas Investasi Aset Non Keuangan	Rp215.686.266.414,00
+C.1	Arus Masuk Kas dari Aktivitas Pembiayaan	Rp0,00
+C.2	Arus Keluar Kas dari Aktivitas Pembiayaan	Rp68.750.000.000.000,00
+D.2	Arus Keluar Kas dari Aktivitas Non Anggaran	Rp45.163.616.617,00
+D.1	Arus Masuk Kas dari Aktivitas Non Anggaran	Rp45.163.616.617,00
+A.3	Arus Kas Bersih dari Aktivitas Operasi	Rp292.171.839.960,00
+D.3	Arus Kas Bersih dari Aktivitas Aset Non Anggaran	Rp0,00
+B.3	Arus Kas Bersih dari Aktivitas Aset Non Keuangan	Rp215.686.266.414,00
+C.3	Arus Kas Bersih dari Aktivitas Aset Pembiayaan	Rp68.750.000.000.000,00
+E.1	Jumlah	Rp140.819.521.752.184,00
+\.
+
+
+-- Completed on 2021-02-23 09:36:58 WIB
+
+--
+-- PostgreSQL database dump complete
+--
+
