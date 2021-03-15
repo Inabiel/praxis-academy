@@ -7,36 +7,8 @@ const pool = new Pool({
     port: 5432,
 })
 
-const buatTableEmployee = async () => {
-    return pool.query(`
-create table if not exists employee (
-    nim varchar not null primary key,
-    nama varchar, 
-    gender int not null,
-    gaji int
-)
-`)
-}
 
-const tambahUser = async (user) => {
-    return pool.query(`
-insert into employee values(
-    $1,
-    $2,
-    $3,
-    $4
-)
-`,
-        [user.nip, user.nama, user.gender, user.gaji])
-}
 
-const getUsers = async () => {
-    try {
-        return pool.query('select * from employee')
-    } catch (e) {
-        console.log(e)
-    }
-}
 /*
 pool.connect()
     .then(() => {
