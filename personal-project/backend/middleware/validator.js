@@ -3,7 +3,7 @@ const userValidationRules = () => {
   return [
     body("nama").isString().escape(),
     body("email").isEmail(),
-    body("noTelpon").isString(),
+    body("notelpon").isString(),
     body("password").isLength({ min: 8 }),
   ];
 };
@@ -11,7 +11,7 @@ const userValidationRules = () => {
 const loginValidationRules = () => {
   return [
     body("email").isEmail().optional(),
-    body("noTelpon").isString().optional(),
+    body("notelpon").isString().optional(),
     body("password").isLength({ min: 8 }),
   ];
 };

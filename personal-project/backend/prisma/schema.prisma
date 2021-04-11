@@ -16,6 +16,7 @@ model User {
   email     String  @unique
   noTelpon  String  @db.VarChar(14)
   password  String
+  avatar    String?
   deskripsi String?
   roles     Roles?  @relation(references: [id], fields: [rolesId])
   rolesId   Int?
@@ -35,7 +36,7 @@ model Event {
   isDone    Boolean @default(false)
   user      User?    @relation(references: [id], fields: [userId])
   userId    String?
-  categories kategoriEvent[]
+  categories kategoriEvent[] 
   eventImages eventImages[]
   listKeperluan listKeperluan[]
 }
@@ -66,5 +67,5 @@ model kategoriEvent {
   id        Int    @id @default(autoincrement())
   nama      String @db.VarChar(20)
   deskripsi String
-  events Event[]
+  events Event[] 
 }
